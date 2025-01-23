@@ -1,15 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="author" content="Juan Pablo Caro Oosrio">
+    <link rel="stylesheet" href="stylesinicio.css">
+    <title>Garito Cacino </title>
 </head>
 <body>
-    <h1>nuevo titulo</h1>
-    <div>
-        esto es un cambio
-        hola como vas 
-    </div>
+    <section class="Contenido">
+    <section class="Titulo"><h1>GARITO CASINO</h1> <img src="GARITO_BLACK_Logo.png" alt="CASINO" width="400px" height="400px"></section>
+    <section class="Login">
+    <form  method="get">  
+        <fieldset>
+        <legend>Ingese sus Datos</legend>
+        <label for="genero">seleccione el genero</label>
+        <select name="tipo" id="genero">
+            <option value="F"> "Femenino"</option>
+            <option value="M"> "Masculino"</option>
+        </select>
+        <FIeldset>
+            <label for="fnombre">Nombre</label>
+            <input type="text" placeholder="Nombre" id="fnombre">
+            <br><br>
+            <label for="fcorreo">Email</label>
+            <input type="email" placeholder="xxxxx@xxxxxx" name="email" id="fcorreo">
+            <br><br>
+            <label for="fpassword">contraseña</label>
+            <input type="password" placeholder="Ingrese su contraseña" name="password" id="fpassword"><br><br>
+            <input type="submit" value="Iniciar Sesión"><br><br>
+            <input type="submit" value="Registrarse">
+            <br><br>
+        </fieldset>
+        <br><br>
+        </fieldset><br><br>
+        <label for="comet">sugerencias</label><br>
+        <textarea name="comentarios" id="comet" rows="12" cols="50" placeholder="Escriba aqui sus su generencias o comentarios"></textarea>
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+    </section>
+</section>
 </body>
 </html>
