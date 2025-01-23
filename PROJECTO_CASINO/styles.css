@@ -1,0 +1,174 @@
+/* Estilo general (escritorio y tablets) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, rgb(236, 48, 48), gold);
+  /* Asegúrate de que el fondo ocupe toda la página */
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "nav articles aside"
+      "footer footer footer";
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+    gap: 10px;
+  }
+  /*  header  */
+  header {
+    display: flex;
+    grid-area: header;
+    background-image: url('headercasino.png');
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+
+  }
+  header img{
+    border-radius: 10%;
+  }
+  header ol{
+    display: flex;
+    margin-top: 50px;
+  }
+  header a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding:20px;
+  }
+  header a:hover{
+    border: solid 1px white;
+    border-radius: 5px;
+  }
+  header a:active{
+    background-color: white;
+  }
+/* nav */
+  nav {
+    color: white;
+    grid-area: nav;
+    background-color: #000000;
+    padding: 20px;
+    text-align: left;
+    border-radius: 10px;
+  }
+  nav section{
+    text-shadow: 2px 2px 6px rgb(255, 234, 49);
+  }
+  nav ol{
+    list-style: none;
+    margin: 30px;
+  }
+  nav li{
+    padding: 20px;
+    margin: 35px;
+    height: 30%;
+    width: 60%;
+    border: solid 1px #eca304;
+    border-radius: 5px;
+  }
+  nav a{
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+  }
+  nav li:hover{
+    border: solid 1px #ffffff;
+  }
+  /* articles */
+  .articles {
+    grid-area: articles;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  article {
+    background-color: #000000;
+    text-align: center;
+    display: block;
+    color: rgb(233, 185, 30);
+    border-radius: 10px;
+    padding: 10px;
+  }
+  article img{
+    width: 90%;
+    height: 90%;
+    border-radius: 5px;
+  }
+
+  aside {
+    grid-area: aside;
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    align-content: center;
+    border-radius: 10px;
+  }
+
+  aside section a{
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    
+  }
+
+  aside section a{
+    width: 100px;
+    height: 100px;
+}
+aside section a img{
+    width: 50%;
+    height: 50%;
+}
+
+  footer {
+    grid-area: footer;
+    background-color: #000000;
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  /* Estilos para pantallas pequeñas (resoluciones menores a 768px) */
+  
+  @media (max-width: 600px) {
+    .container {
+      grid-template-areas:
+        "header"
+        "nav"
+        "articles"
+        "aside"
+        "footer";
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto 1fr auto auto;
+      height: auto;
+    }
+  
+    .articles {
+      grid-template-columns: 1fr; /* Los artículos ocupan una sola columna */
+      grid-template-rows: auto;
+      gap: 5px;
+    }
+  }
+  
